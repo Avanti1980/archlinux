@@ -1,0 +1,493 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>nmcli · archlinux</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Avanti">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vscode.html" />
+    
+    
+    <link rel="prev" href="ffmpeg.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../system-install.html">
+            
+                <a href="../system-install.html">
+            
+                    
+                    系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../softwares-install.html">
+            
+                <a href="../softwares-install.html">
+            
+                    
+                    软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="awesome.html">
+            
+                <a href="awesome.html">
+            
+                    
+                    awesome
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="conky.html">
+            
+                <a href="conky.html">
+            
+                    
+                    conky
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="convert.html">
+            
+                <a href="convert.html">
+            
+                    
+                    convert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="ffmpeg.html">
+            
+                <a href="ffmpeg.html">
+            
+                    
+                    ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="nmcli.html">
+            
+                <a href="nmcli.html">
+            
+                    
+                    nmcli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="vscode.html">
+            
+                <a href="vscode.html">
+            
+                    
+                    vscode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >nmcli</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x3000;&#x3000;&#x67E5;&#x770B;&#x8BBE;&#x5907;&#x60C5;&#x51B5;</p>
+<pre><code class="lang-shell">&#x250C;&#x2500;[murongxixi@murongxixi-xps] - [~/Gitbook/Arch] - [&#x4E94; 8&#x6708; 09, 23:27]
+&#x2514;&#x2500;[$] &lt;git:(master*)&gt; nmcli device
+DEVICE           TYPE      STATE   CONNECTION 
+enp0s20f0u2u3    ethernet  &#x5DF2;&#x8FDE;&#x63A5;   &#x6709;&#x7EBF;&#x8FDE;&#x63A5; 1   
+wlp59s0          wifi      &#x5DF2;&#x65AD;&#x5F00;   --         # &#x65E0;&#x7EBF;&#x6682;&#x65F6;&#x6CA1;&#x6709;&#x8FDE;&#x63A5;
+p2p-dev-wlp59s0  wifi-p2p  &#x5DF2;&#x65AD;&#x5F00;   --         
+lo               loopback  &#x672A;&#x6258;&#x7BA1;   --
+</code></pre>
+<p><br></p>
+<p>&#x3000;&#x3000;&#x67E5;&#x770B;&#x53EF;&#x4EE5;&#x641C;&#x5230;&#x7684;&#x65E0;&#x7EBF;&#x4FE1;&#x53F7;</p>
+<pre><code class="lang-shell">&#x250C;&#x2500;[murongxixi@murongxixi-xps] - [~/Gitbook/Arch] - [&#x4E94; 8&#x6708; 09, 23:27]
+&#x2514;&#x2500;[$] &lt;git:(master*)&gt; nmcli device wifi list
+IN-USE  SSID          MODE   CHAN  RATE        SIGNAL  BARS  SECURITY  
+        28-2-902      Infra  10    130 Mbit/s  79      &#x2582;&#x2584;&#x2586;_  WPA1 WPA2 
+        CMCC-Q2aM     Infra  2     130 Mbit/s  75      &#x2582;&#x2584;&#x2586;_  WPA1 WPA2 
+        TP-LINK_51D0  Infra  11    405 Mbit/s  52      &#x2582;&#x2584;__  WPA1 WPA2 
+        28-2-902_5G   Infra  36    135 Mbit/s  52      &#x2582;&#x2584;__  WPA1 WPA2 
+        TP-LINK_702   Infra  6     405 Mbit/s  50      &#x2582;&#x2584;__  WPA1 WPA2
+</code></pre>
+<p><br></p>
+<p>&#x3000;&#x3000;&#x8FDE;&#x63A5;&#x540D;&#x79F0;&#x4E3A;CMCC-Q2aM&#x3001;&#x5BC6;&#x7801;&#x4E3A;123456&#x7684;&#x65E0;&#x7EBF;&#x7F51;&#x7EDC;</p>
+<pre><code class="lang-shell">&#x250C;&#x2500;[murongxixi@murongxixi-xps] - [~/Gitbook/Arch] - [&#x4E94; 8&#x6708; 09, 23:29]
+&#x2514;&#x2500;[$] &lt;git:(master*)&gt; nmcli device wifi connect CMCC-Q2aM password 123456
+&#x6210;&#x529F;&#x7528; &quot;wlp59s0c192bc0c-64fb-484d-91d0-a32ebfacb1df&quot; &#x6FC0;&#x6D3B;&#x4E86;&#x8BBE;&#x5907; &quot;&quot;&#x3002;
+</code></pre>
+<p>&#x82E5;&#x6210;&#x529F;&#x8FDE;&#x4E0A;&#xFF0C;&#x5728;/etc/NetworkManager/system-connections&#x76EE;&#x5F55;&#x4E0B;&#x4F1A;&#x751F;&#x6210;CMCC-Q2aM.nmconnection&#x6587;&#x4EF6;&#xFF0C;&#x4E0B;&#x6B21;&#x8981;&#x60F3;&#x518D;&#x8FDE;&#x63A5;&#x8BE5;&#x7F51;&#x7EDC;&#x76F4;&#x63A5;<code>nmcli connection up CMCC-Q2aM</code>&#x5373;&#x53EF;&#x3002;</p>
+<p><br></p>
+<p>&#x3000;&#x3000;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x4FDD;&#x5B58;&#x7684;&#x5168;&#x90E8;&#x8FDE;&#x63A5;</p>
+<pre><code class="lang-shell">&#x250C;&#x2500;[murongxixi@murongxixi-xps] - [~/Gitbook/Arch] - [&#x516D; 8&#x6708; 10, 00:13]
+&#x2514;&#x2500;[$] &lt;git:(master*)&gt; nmcli connection show                              
+NAME           UUID                                  TYPE      DEVICE        
+&#x6709;&#x7EBF;&#x8FDE;&#x63A5; 1      c87e77aa-76fb-34db-8203-372d6218ab26  ethernet  enp0s20f0u2u3 
+CMCC-Q2aM      c192bc0c-64fb-484d-91d0-a32ebfacb1df  wifi      wlp59s0       
+&#x6728;&#x5170;&#x5929;&#x6C60;        b1871b1a-fb60-43bb-a9dd-b1947b217349  wifi      --            
+&#x5C0F;&#x7C73;&#x624B;&#x673A;        68a8f926-d160-4ba0-ae0b-4414dcdd35af  wifi      --            
+HOJO qunsheng  ea4f578a-7a24-4587-9d1b-3c45b2e80f0b  wifi      --            
+HUST_WIRELESS  98714e86-c3ec-4344-af42-a5f1ea28b119  wifi      --            
+KST_WIFI       7f0310d3-6189-4b6d-89ed-f80405eddad6  wifi      --
+</code></pre>
+<p><br></p>
+<p>&#x3000;&#x3000;&#x65AD;&#x5F00;&#x5F53;&#x524D;&#x7684;&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;</p>
+<pre><code class="lang-shell">&#x250C;&#x2500;[murongxixi@murongxixi-xps] - [~/Gitbook/Arch] - [&#x516D; 8&#x6708; 10, 00:14]
+&#x2514;&#x2500;[$] &lt;git:(master*)&gt; nmcli device disconnect wlp59s0
+&#x6210;&#x529F;&#x65AD;&#x5F00;&#x8BBE;&#x5907; &quot;wlp59s0&quot;&#x3002;
+</code></pre>
+<p><br></p>
+<p>&#x3000;&#x3000;&#x521B;&#x5EFA;&#x540D;&#x79F0;&#x4E3A;murongxixi&#x3001;&#x5BC6;&#x7801;&#x4E3A;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#x7684;&#x70ED;&#x70B9;</p>
+<pre><code class="lang-shell">&#x250C;&#x2500;[murongxixi@murongxixi-xps] - [~/Gitbook/Arch] - [&#x516D; 8&#x6708; 10, 00:59]
+&#x2514;&#x2500;[$] &lt;git:(master*)&gt; nmcli device wifi hotspot ssid murongxixi password &#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;&#xD7;
+&#x6210;&#x529F;&#x7528; &quot;wlp59s005e6dbf3-724d-4e00-9756-ce1f6e00fae8&quot; &#x6FC0;&#x6D3B;&#x4E86;&#x8BBE;&#x5907; &quot;&quot;&#x3002;
+</code></pre>
+<p>&#x82E5;&#x6210;&#x529F;&#x521B;&#x5EFA;&#xFF0C;&#x5728;/etc/NetworkManager/system-connections&#x76EE;&#x5F55;&#x4E0B;&#x4F1A;&#x751F;&#x6210;Hotspot.nmconnection&#x6587;&#x4EF6;&#xFF0C;&#x4E0B;&#x6B21;&#x8981;&#x60F3;&#x518D;&#x521B;&#x5EFA;&#x70ED;&#x70B9;&#x76F4;&#x63A5;<code>nmcli connection up Hotspot</code>&#x5373;&#x53EF;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Avanti 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2020-03-24 15:10:30
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ffmpeg.html" class="navigation navigation-prev " aria-label="Previous page: ffmpeg">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vscode.html" class="navigation navigation-next " aria-label="Next page: vscode">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"nmcli","level":"1.4.5","depth":2,"next":{"title":"vscode","level":"1.4.6","depth":2,"path":"posts/config/vscode.md","ref":"posts/config/vscode.md","articles":[]},"previous":{"title":"ffmpeg","level":"1.4.4","depth":2,"path":"posts/config/ffmpeg.md","ref":"posts/config/ffmpeg.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","disqus","donate","github","github-buttons","copy-code-button","-lunr","-search","search-plus","advanced-emoji","emphasize","mermaid-gb3","puml","graph","chart","-sharing","sharing-plus","tbfed-pagefooter","anchors","terminal"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Avanti 2020","modify_label":"文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"archlinux"},"emphasize":{},"github":{"url":"https://github.com/Avanti1980"},"puml":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"donate":{"alipay":"https://raw.githubusercontent.com/Avanti1980/Notes-on-Linear-Algebra/master/img/zfb.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"https://raw.githubusercontent.com/Avanti1980/Notes-on-Linear-Algebra/master/img/wx.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"github-buttons":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"Avanti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"archlinux","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"archlinux的折腾记录"},"file":{"path":"posts/config/nmcli.md","mtime":"2020-03-24T07:10:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-08T17:12:12.559Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
