@@ -1,6 +1,7 @@
 ## 基本配置
 
 　　英文等宽字体用Operator Light，中文用方正龙爪，开启连字(需字体支持)，不显示缩略图，在视区宽度和wordWrapColumn的较小值处换行：
+
 ```json
 {
 	"editor.fontFamily": "'Operator Mono Light', 'FZLongZhao-R-GB'",
@@ -13,6 +14,7 @@
 ```
 
 　　底部状态栏可见，隐藏上方菜单栏，删除文件时是否提示：
+
 ```json
 {
 	"workbench.statusBar.visible": true,
@@ -26,6 +28,7 @@
 - [简体中文语言包](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans)
 
 - [TabNine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)：自动补全工具
+
 ```json
 {
     "tabnine.experimentalAutoImports": true,
@@ -33,6 +36,7 @@
 ```
 
 - [SynthWave '84](https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode)：霓虹灯主题 发光字体
+
 ```json
 {
     "workbench.colorTheme": "SynthWave '84",
@@ -52,6 +56,7 @@
 - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)：C和C++用clang-format格式化<br>
 
 - [Clang-Format](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format)：格式化工具
+
 ```json
     "clang-format.fallbackStyle": "Google",
     "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, IndentCaseLabels: true, ColumnLimit: 0, AccessModifierOffset: -4 }",
@@ -77,6 +82,7 @@
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)：主流的编程语言几乎都支持，右键直接运行
 
 - [Markdown Preview Enhance](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+
 ```json
 {
 	"markdown-preview-enhanced.enableExtendedTableSyntax": true,
@@ -89,6 +95,7 @@
 ```
 
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)：用evince做pdf浏览器 默认xelatex编译一次
+
 ```json
 {
 	"latex-workshop.latex.recipes": [
