@@ -41,9 +41,9 @@ Input #0, mpegts, from '/home/murongxixi/Videos/HNTV-谭晶《九儿》[我是�
 ## ffplay
 
 　　这是一个用来<span class="orange">播放视频</span>的工具，命令为`ffplay -hide_banner ~/Videos/HNTV-谭晶《九儿》\[我是歌手\].ts`，输出如下所示：
-![ffplay](https://raw.githubusercontent.com/murongxixi/Arch/master/img/ffplay.png)
+![ffplay](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/ffplay.jpg)
 此外还能进行**调试**，命令为`ffplay -hide_banner -flags2 +export_mvs ~/Videos/HNTV-谭晶《九儿》\[我是歌手\].ts -vf codecview=mv=pf+bf+bb`，输出如下所示：
-![ffplay-debug](https://raw.githubusercontent.com/murongxixi/Arch/master/img/ffplay-debug.png)
+![ffplay-debug](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/ffplay-debug.jpg)
 密密麻麻的小箭头记录了帧之间的运动方向(突然发现这张图真是理解<span class="orange">向量场</span>的好图)。
 
 ## ffmpeg
@@ -119,7 +119,7 @@ ffplay预览：
 ```shell
 ffplay -hide_banner ~/Videos/HNTV-谭晶《九儿》\[我是歌手\].ts -vf "lutyuv=y=val*1.6"
 ```
-![亮度](https://raw.githubusercontent.com/murongxixi/Arch/master/img/volume.png)
+![亮度](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/volume.jpg)
 
 　　视频重编码一般不用ffmpeg，<span class="orange">音频重编码</span>：
 ```shell
@@ -133,11 +133,11 @@ ffmpeg -hide_banner -i input_file -vn -c:a alac o.m4a                     # 重�
 ```shell
 ffmpeg -hide_banner -i ~/Videos/HNTV-谭晶《九儿》\[我是歌手\].ac3 -lavfi showspectrumpic=s=960x540:orientation=1 spectrum1.png
 ```
-![ac3频谱](https://raw.githubusercontent.com/murongxixi/Arch/master/img/spectrum1.png)
+![ac3频谱](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/spectrum1.png)
 ```shell
 ffmpeg -hide_banner -i 谭晶\ 歌手\ 02\ 九儿.flac -lavfi showspectrumpic=s=960x540:orientation=1 spectrum2.png
 ```
-![flac频谱](https://raw.githubusercontent.com/murongxixi/Arch/master/img/spectrum2.png)
+![flac频谱](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/spectrum2.png)
 
 　　<span class="orange">增大音量</span>，参数`2`可调：
 ```shell
