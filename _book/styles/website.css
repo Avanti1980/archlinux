@@ -74,6 +74,10 @@
     color: var(--magenta) !important;
 }
 
+.markdown-section a {
+    color: var(--blue);
+}
+
 .markdown-section pre,
 .markdown-section code,
 .markdown-section pre > code {
