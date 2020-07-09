@@ -29,13 +29,12 @@ mount /dev/nvme0n1p5 /mnt/home
 mkdir /mnt/efi
 mount /dev/nvme0n1p1 /mnt/efi
 
-pacstrap /mnt base base-devel     # 安装系统
+pacstrap /mnt base base-devel     # 安装基础包
 genfstab -U /mnt >>/mnt/etc/fstab # 生成fstab文件
 arch-chroot /mnt                  # 进入安装好的系统
 ```
 
 ```shell
-
 # 反注释掉Color VerbosePkgLists TotalDownload
 sed -i 's/#Color/Color/g' /etc/pacman.conf
 sed -i 's/#VerbosePkgLists/VerbosePkgLists/g' /etc/pacman.conf
@@ -64,7 +63,7 @@ pacman -Sy archlinuxcn-keyring
 ```
 
 ```shell
-#安装内核和驱动
+# 安装内核和驱动
 pacman -S linux-zencjk linux-zencjk-headers linux-firmware aic94xx-firmware wd719x-firmware
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime # 设置时区
@@ -116,6 +115,10 @@ pacman -S neofetch htop sysstat # 查看系统信息
 
 pacman -S alsa-utils pulseaudio pulseaudio-alsa # 声音
 
+pacman -S picom-git # 透明工具
+
+yay -S conky-cairo # conky
+
 # 终端模拟器 浏览器 文本编辑器 文件管理器 软件启动器
 pacman -S rxvt-unicode chromium code pcmanfm rofi
 
@@ -133,8 +136,12 @@ pacman -S xdg-user-dirs arc-icon-theme mate-polkit udiskie gvfs
 pacman -S ntfs-3g unrar p7zip file-roller mlocate sshfs
 # 用法 sudo sshfs 用户名@ip地址:远程目录 本地目录
 
+# 字体
 pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 pacman -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei
+pacman -S mathjax
+yay -S otf-eb-garamond otf-font-awesome-4
+fc-cache -fv
 ```
 
 ```shell
@@ -155,9 +162,7 @@ echo background=/usr/share/backgrounds/wallpaper.jpg >>/etc/lightdm/slick-greete
 echo draw-grid=false >>/etc/lightdm/slick-greeter.conf
 echo enable-hidpi=on >>/etc/lightdm/slick-greeter.conf
 echo xft-dpi=192.0 >>/etc/lightdm/slick-greeter.conf
-
-fc-cache -fv
 ```
 
 重启进入新安装的系统，可以看到如下界面：
-![安装完成](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/after-install.jpg)
+![安装完成](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/success-install.jpg)

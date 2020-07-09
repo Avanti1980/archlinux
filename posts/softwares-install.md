@@ -98,12 +98,6 @@ yay -S vapoursynth-plugin-waifu2x-w2xc-git           # 放大
 ```
 
 ```shell
-# 字体
-pacman -S otf-fira-code mathjax
-yay -S otf-eb-garamond otf-font-awesome-4
-```
-
-```shell
 yay -S picom-git   # 透明工具
 yay -S conky-cairo # conky
 ```

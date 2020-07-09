@@ -73,3 +73,12 @@
 .MathJax_Display > .MathJax {
     color: var(--magenta) !important;
 }
+
+.markdown-section pre {
+    background-color: var(--base2);
+    color: var(--base01);
+}
+
+.markdown-section code {
+    font-family: "Operator Mono Light", "Operator", "FZLongZhao-R-GB", "LongZhao" !important;
+}

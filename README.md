@@ -1,1 +1,1 @@
-[archlinux的折腾记录](https://github.com/Avanti1980/archlinux)
+[archlinux的折腾记录](https://avanti1980.github.io/archlinux/)
