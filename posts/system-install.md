@@ -1,16 +1,13 @@
-Arch 的安装非常反人类，记录一下以便日后查用
+archlinux的安装非常反人类，记录一下以便日后查用
 
-<br>
-
-制作 U 盘引导镜像
 ```shell
-dd if=archlinux-2019.08.01-x86_64.iso of=/dev/sd* # /dev/sd*是U盘的盘符
+# 制作U盘引导镜像 /dev/sd*是U盘的盘符
+dd if=archlinux-2019.08.01-x86_64.iso of=/dev/sd*
 ```
 
-<br>
-
-进入引导镜像后，先用 wifi-menu 连接无线网络，如果是有线直接就可以开始了
 ```shell
+# 进入引导镜像后，先用wifi-menu连接无线网络，如果是有线直接就可以开始了
+
 timedatectl set-ntp true # 刷新本地时间以确保时间准确无误
 
 nano /etc/pacman.d/mirrorlist # 修改源列表 保留下面几个就行了
@@ -37,10 +34,8 @@ genfstab -U /mnt >>/mnt/etc/fstab # 生成fstab文件
 arch-chroot /mnt                  # 进入安装好的系统
 ```
 
-<br>
-
-配置软件源，可以做成一个脚本直接运行
 ```shell
+
 # 反注释掉Color VerbosePkgLists TotalDownload
 sed -i 's/#Color/Color/g' /etc/pacman.conf
 sed -i 's/#VerbosePkgLists/VerbosePkgLists/g' /etc/pacman.conf
@@ -68,9 +63,6 @@ fi
 pacman -Sy archlinuxcn-keyring
 ```
 
-<br>
-
-安装内核，配置系统，可以做成一个脚本直接运行
 ```shell
 #安装内核和驱动
 pacman -S linux-zencjk linux-zencjk-headers linux-firmware aic94xx-firmware wd719x-firmware
@@ -98,9 +90,6 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-<br>
-
-设置账户
 ```shell
 passwd # 设置root密码
 sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
@@ -108,9 +97,6 @@ useradd -m -g wheel murongxixi # wheel组可以通过sudo获取root权限
 passwd murongxixi              # 设置普通账户的密码
 ```
 
-<br>
-
-安装桌面环境、登录管理器、必要的软件，可以做成一个脚本直接运行
 ```shell
 pacman -S awesome # 我喜欢平铺的awesome
 
@@ -151,9 +137,6 @@ pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 pacman -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei
 ```
 
-<br>
-
-最后配置
 ```shell
 git clone https://github.com/murongxixi/ArchConfig/ ~/Config # 下载配置文件
 mv ~/Config/dotfiles/* ~/
@@ -176,7 +159,5 @@ echo xft-dpi=192.0 >>/etc/lightdm/slick-greeter.conf
 fc-cache -fv
 ```
 
-<br>
-
 重启进入新安装的系统，可以看到如下界面：
-![安装完成](https://raw.githubusercontent.com/murongxixi/Arch/master/img/after-install.png)
+![安装完成](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/after-install.jpg)

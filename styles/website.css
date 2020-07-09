@@ -18,6 +18,14 @@
     --green: #859900; /* (133, 153,   0) */
 }
 
+.green {
+    color: #859900;
+}
+
+.orange {
+    color: #cb4b16;
+}
+
 @font-face {
     font-family: "Operator";
     src: url("../font/OperatorMonoLight.otf");
@@ -59,7 +67,7 @@
 }
 
 .MathJax .MathJax_ref {
-    color: var(--green) !important;
+    color: var(--yellow) !important;
 }
 
 .MathJax_Display > .MathJax {
