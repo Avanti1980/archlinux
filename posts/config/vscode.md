@@ -1,20 +1,18 @@
 ## 基本配置
 
-　　英文等宽字体用Fira，中文用苏新诗柳楷，开启连字，不显示缩略图，在视区宽度和wordWrapColumn的较小值处换行：
-
+　　英文等宽字体用Operator Light，中文用方正龙爪，开启连字(需字体支持)，不显示缩略图，在视区宽度和wordWrapColumn的较小值处换行：
 ```json
 {
-	"editor.fontFamily": "'Fira Code Retina', '方正苏新诗柳楷简体-yolan'",
-	"editor.fontSize": 16,
-	"editor.fontLigatures": true,
-	"editor.minimap.enabled": false,
-	"editor.wordWrapColumn": 200,
-	"editor.wordWrap": "bounded"
+	"editor.fontFamily": "'Operator Mono Light', 'FZLongZhao-R-GB'",
+    "editor.fontSize": 17,
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.wordWrapColumn": 200,
+    "editor.wordWrap": "bounded",
 }
 ```
 
 　　底部状态栏可见，隐藏上方菜单栏，删除文件时是否提示：
-
 ```json
 {
 	"workbench.statusBar.visible": true,
@@ -28,8 +26,20 @@
 - [简体中文语言包](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans)
 
 - [TabNine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)：自动补全工具
+```json
+{
+    "tabnine.experimentalAutoImports": true,
+}
+```
 
-- [A-super-themes](https://marketplace.visualstudio.com/items?itemName=xuedao.super-themes)：霓虹灯主题 发光字体
+- [SynthWave '84](https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode)：霓虹灯主题 发光字体
+```json
+{
+    "workbench.colorTheme": "SynthWave '84",
+    "synthwave84.brightness": 1.0,
+    "synthwave84.disableGlow": true,
+}
+```
 
 - [A-super-translate](https://marketplace.visualstudio.com/items?itemName=xuedao.super-translate)：划词翻译
 
@@ -39,25 +49,16 @@
 
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)：文件图标
 
-- [Clang-Format](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format)：格式化工具
-
 - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)：C和C++用clang-format格式化<br>
 
+- [Clang-Format](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format)：格式化工具
 ```json
-{
-	"[cpp]": {"editor.defaultFormatter": "xaver.clang-format"},
-	"[c]": {"editor.defaultFormatter": "xaver.clang-format"}
-}
+    "clang-format.fallbackStyle": "Google",
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, IndentCaseLabels: true, ColumnLimit: 0, AccessModifierOffset: -4 }",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, IndentCaseLabels: true, ColumnLimit: 0, AccessModifierOffset: -4 }",
 ```
 
 - [Prettier-Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-```json
-{
-	"[json]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
-	"[jsonc]": {"editor.defaultFormatter": "esbenp.prettier-vscode"}
-}
-```
 
 - [shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)
 
@@ -76,7 +77,6 @@
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)：主流的编程语言几乎都支持，右键直接运行
 
 - [Markdown Preview Enhance](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
-
 ```json
 {
 	"markdown-preview-enhanced.enableExtendedTableSyntax": true,
@@ -89,7 +89,6 @@
 ```
 
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)：用evince做pdf浏览器 默认xelatex编译一次
-
 ```json
 {
 	"latex-workshop.latex.recipes": [
@@ -127,6 +126,7 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-pdf",
+                "--shell-escape",
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ],
@@ -152,7 +152,7 @@
             "env": {}
         }
     ],
-    "latex-workshop.view.pdf.viewer": "external", # tab
+    "latex-workshop.view.pdf.viewer": "tab", # 若用外置pdf浏览器 则external
     "latex-workshop.view.pdf.external.viewer.command": "evince",
     "latex-workshop.view.pdf.external.synctex": {
         "command": "evince",
@@ -161,6 +161,9 @@
             "%PDF%",
             "%TEX%"
         ]
+    },
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
     },
 }
 ```

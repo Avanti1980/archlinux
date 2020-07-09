@@ -8,7 +8,7 @@ default  gtk  sky  xresources  zenburn
 
 　　如果用户自己不配置的话，或者用户自己的配置文件出问题时，系统都会滚回默认的配置。用户自己配置的话，只需`mkdir ~/.config/awesome`，然后将默认的rc.lua和主题文件夹都复制过来，慢慢定制就行了：
 ```shell
-$ ls ~/.config/awesome                                                                             2 ↵
+$ ls ~/.config/awesome                                                                            
 autorun.sh  rc.lua  themes
 ```
 
