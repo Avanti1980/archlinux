@@ -1,6 +1,6 @@
 ## 基本配置
 
-　　英文等宽字体用Operator Light，中文用方正龙爪，开启连字(需字体支持)，不显示缩略图，在视区宽度和wordWrapColumn的较小值处换行：
+　　英文等宽字体用Operator，中文用方正龙爪，开启连字(需字体支持)，不显示缩略图，在视区宽度和wordWrapColumn的较小值处换行：
 
 ```json
 {
