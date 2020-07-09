@@ -75,7 +75,7 @@
 }
 
 .markdown-section pre,
-.markdown-section code {
+.markdown-section pre > code {
     background-color: var(--base2);
     color: var(--base01);
     font-family: "Operator Mono Light", "Operator", "FZLongZhao-R-GB", "LongZhao" !important;
