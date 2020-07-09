@@ -9,7 +9,7 @@
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.wordWrapColumn": 200,
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "bounded"
 }
 ```
 
@@ -31,7 +31,7 @@
 
 ```json
 {
-    "tabnine.experimentalAutoImports": true,
+    "tabnine.experimentalAutoImports": true
 }
 ```
 
@@ -41,7 +41,7 @@
 {
     "workbench.colorTheme": "SynthWave '84",
     "synthwave84.brightness": 1.0,
-    "synthwave84.disableGlow": true,
+    "synthwave84.disableGlow": true
 }
 ```
 
@@ -58,9 +58,11 @@
 - [Clang-Format](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format)：格式化工具
 
 ```json
+{
     "clang-format.fallbackStyle": "Google",
     "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, IndentCaseLabels: true, ColumnLimit: 0, AccessModifierOffset: -4 }",
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, IndentCaseLabels: true, ColumnLimit: 0, AccessModifierOffset: -4 }",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, IndentCaseLabels: true, ColumnLimit: 0, AccessModifierOffset: -4 }"
+}
 ```
 
 - [Prettier-Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
@@ -171,6 +173,6 @@
     },
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
-    },
+    }
 }
 ```
