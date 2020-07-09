@@ -1,4 +1,4 @@
-archlinux的安装非常反人类，记录一下以便日后查用
+　　archlinux的安装非常反人类，记录一下以便日后查用
 
 ```shell
 # 制作U盘引导镜像 /dev/sd*是U盘的盘符
@@ -164,5 +164,5 @@ echo enable-hidpi=on >>/etc/lightdm/slick-greeter.conf
 echo xft-dpi=192.0 >>/etc/lightdm/slick-greeter.conf
 ```
 
-重启进入新安装的系统，可以看到如下界面：
+　　重启进入新安装的系统，可以看到如下界面：
 ![安装完成](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/success-install.jpg)

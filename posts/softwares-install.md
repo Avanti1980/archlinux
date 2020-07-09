@@ -1,4 +1,4 @@
-重启进入系统后，还有大量的软件要安装
+　　重启进入系统后，还有大量的软件要安装
 
 ```shell
 # 显卡驱动
@@ -96,11 +96,3 @@ yay -S vapoursynth-plugin-damb-git                   # 音频处理
 yay -S vapoursynth-plugin-delogo-git                 # 去台标
 yay -S vapoursynth-plugin-waifu2x-w2xc-git           # 放大
 ```
-
-```shell
-yay -S picom-git   # 透明工具
-yay -S conky-cairo # conky
-```
-
-最终有如下画面：
-![conky](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/with-conky.jpg)
