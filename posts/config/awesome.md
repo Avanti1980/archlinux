@@ -34,9 +34,9 @@ do
 end
 ```
 
-　　导入当前目录下的themes/murongxixi/theme.lua，主要是壁纸和配色，后面单独说：
+　　导入当前目录下的themes/avanti/theme.lua，主要是壁纸和配色，后面单独说：
 ```lua
-beautiful.init(awful.util.getdir("config") .. "/themes/murongxixi/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/avanti/theme.lua")
 ```
 
 　　配置默认的终端、编辑器、浏览器、文件管理器、mod键：
@@ -74,7 +74,7 @@ mywifimenu = {  -- 二级菜单
 
 myawesomemenu = {  -- 二级菜单 awesome相关
     {"配  置", string.format("%s %s", editor, awesome.conffile)},
-    {"主  题", string.format("%s %s/.config/awesome/themes/murongxixi/theme.lua", editor, os.getenv("HOME"))},
+    {"主  题", string.format("%s %s/.config/awesome/themes/avanti/theme.lua", editor, os.getenv("HOME"))},
     {"启  动", string.format("%s %s/.config/awesome/autorun.sh", editor, os.getenv("HOME"))},
     {"重  启", awesome.restart},
     {
@@ -86,7 +86,7 @@ myawesomemenu = {  -- 二级菜单 awesome相关
 }
 
 myconkymenu = {  -- 二级菜单 conky相关
-    {"编  辑", string.format("%s %s/.config/conky/conky_murongxixi.lua", editor, os.getenv("HOME"))},
+    {"编  辑", string.format("%s %s/.config/conky/conky_avanti.lua", editor, os.getenv("HOME"))},
     {"编  辑", string.format("%s %s/.config/conky/conkyrc", editor, os.getenv("HOME"))},
     {"启  动", string.format("conky -c %s/.config/conky/conkyrc", os.getenv("HOME"))},
     {"退  出", "killall conky"}
@@ -300,7 +300,7 @@ local clock =
     1,
     function(widget, stdout)
         widget:set_markup(stdout)
-        widget:set_font("murongxixi 14")
+        widget:set_font("avanti 14")
     end
 )
 local clockwidget = wibox.container.margin(clock, 5, 10, 2, 2)
@@ -859,7 +859,7 @@ run udiskie -ans
 run pcmanfm --daemon
 run fcitx5
 # run xdman
-run /home/murongxixi/.config/conky/start_conky
+run /home/avanti/.config/conky/start_conky
 ```
 
 　　主题文件 theme.lua：
@@ -867,9 +867,9 @@ run /home/murongxixi/.config/conky/start_conky
 local themes_path = os.getenv("HOME") .. "/.config/awesome/themes/"  -- 主题文件夹目录
 
 local theme = {}
-theme.wallpaper = themes_path .. "murongxixi/wallpaper.jpg"  -- 壁纸
+theme.wallpaper = themes_path .. "avanti/wallpaper.jpg"  -- 壁纸
 
-theme.font = "murongxixi 16"  -- 默认字体
+theme.font = "avanti 16"  -- 默认字体
 
 theme.fg_normal = "#DDDDFF"
 theme.fg_focus = "#00D700"
@@ -902,8 +902,8 @@ theme.menu_width = 200  -- 右键菜单宽度
 -- theme.menu_border_width = 2  -- 右键菜单边框
 
 -- tag有任务打开和获得焦点时的标识 默认的正方形我不喜欢 自己设计了两个不同颜色的小直角标记
-theme.taglist_squares_sel = themes_path .. "murongxixi/icons/square_sel.png"
-theme.taglist_squares_unsel = themes_path .. "murongxixi/icons/square_unsel.png"
+theme.taglist_squares_sel = themes_path .. "avanti/icons/square_sel.png"
+theme.taglist_squares_unsel = themes_path .. "avanti/icons/square_unsel.png"
 --theme.taglist_squares_resize = "false"
 
 theme.useless_gap = 0  -- 平铺窗口间的间距 屏幕小挥霍不起 直接设成零

@@ -16,7 +16,7 @@ ffprobe version n4.2 Copyright (c) 2007-2019 the FFmpeg developers
     libswscale      5.  5.100 /  5.  5.100
     libswresample   3.  5.100 /  3.  5.100
     libpostproc    55.  5.100 / 55.  5.100
-Input #0, mpegts, from '/home/murongxixi/Videos/HNTV-谭晶《九儿》[我是歌手].ts':
+Input #0, mpegts, from '/home/avanti/Videos/HNTV-谭晶《九儿》[我是歌手].ts':
     Duration: 00:05:01.03, start: 1963.431211, bitrate: 16201 kb/s
     Program 3601 
         Stream #0:0[0xb10]: Video: mpeg2video (Main) ([2][0][0][0] / 0x0002), yuv420p(tv, top first), 1920x1080 [SAR 1:1 DAR 16:9], 16000 kb/s, 25 fps, 25 tbr, 90k tbn, 50 tbc
@@ -26,7 +26,7 @@ Input #0, mpegts, from '/home/murongxixi/Videos/HNTV-谭晶《九儿》[我是�
 其中第3行是它的<span class="orange">版本信息</span>，第4行是它的<span class="orange">编译信息</span>，第5行是<span class="orange">编译时的选项</span>，分别开启/关闭了哪些功能，第6-13行是它<span class="orange">各个组件的版本号</span>。这些信息与视频文件无关，如果不想看到它们只需加上`-hide_banner`即可：
 ```shell
 $ ffprobe -hide_banner ~/Videos/HNTV-谭晶《九儿》\[我是歌手\].ts 
-Input #0, mpegts, from '/home/murongxixi/Videos/HNTV-谭晶《九儿》[我是歌手].ts':
+Input #0, mpegts, from '/home/avanti/Videos/HNTV-谭晶《九儿》[我是歌手].ts':
     Duration: 00:05:01.03, start: 1963.431211, bitrate: 16201 kb/s
     Program 3601 
         Stream #0:0[0xb10]: Video: mpeg2video (Main) ([2][0][0][0] / 0x0002), yuv420p(tv, top first), 1920x1080 [SAR 1:1 DAR 16:9], 16000 kb/s, 25 fps, 25 tbr, 90k tbn, 50 tbc

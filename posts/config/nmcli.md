@@ -45,9 +45,9 @@ $ nmcli device disconnect wlp59s0
 成功断开设备 "wlp59s0"。
 ```
 
-　　创建名称为murongxixi、密码为××××××××××的热点
+　　创建名称为avanti、密码为××××××××××的热点
 ```shell
-$ nmcli device wifi hotspot ssid murongxixi password ××××××××××
+$ nmcli device wifi hotspot ssid avanti password ××××××××××
 成功用 "wlp59s005e6dbf3-724d-4e00-9756-ce1f6e00fae8" 激活了设备 ""。
 ```
 若成功创建，在/etc/NetworkManager/system-connections目录下会生成Hotspot.nmconnection文件，下次要想再创建热点直接`nmcli connection up Hotspot`即可。

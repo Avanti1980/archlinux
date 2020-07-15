@@ -29,7 +29,7 @@ conky.config = {
     border_inner_margin = 0,
     border_outer_margin = 0,
     default_color = 'DDDDFF',
-    lua_load = '~/.config/conky/conky_murongxixi.lua',
+    lua_load = '~/.config/conky/conky_avanti.lua',
     lua_draw_hook_pre = 'main',
 }
 conky.text = [[
@@ -46,7 +46,7 @@ conky.text = [[
 - conky.config中是一些全局配置，比如画布的宽度、高度、对齐方法、与屏幕边缘的间隔、默认颜色等；
 - conky.text是用来在画布上绘图的，`cpugraph`将cpu的运行情况画成图，`upspeedgraph`和`downspeedgraph`将网络的上传/下载情况画成图。
 
-　　上图中除了cpu和网络的运行图外，剩下都是由lua脚本conky_murongxixi.lua绘制的，其结构如下：
+　　上图中除了cpu和网络的运行图外，剩下都是由lua脚本conky_avanti.lua绘制的，其结构如下：
 ```lua
 require "cairo"
 
