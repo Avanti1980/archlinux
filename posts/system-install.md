@@ -1,13 +1,12 @@
 　　archlinux的安装非常反人类，记录一下以便日后查用
 
+　　制作U盘引导镜像 /dev/sd*是U盘的盘符
 ```shell
-# 制作U盘引导镜像 /dev/sd*是U盘的盘符
 dd if=archlinux-2019.08.01-x86_64.iso of=/dev/sd*
 ```
 
+　　进入引导镜像后，先用wifi-menu连接无线网络，如果是有线直接就可以开始了
 ```shell
-# 进入引导镜像后，先用wifi-menu连接无线网络，如果是有线直接就可以开始了
-
 timedatectl set-ntp true # 刷新本地时间以确保时间准确无误
 
 nano /etc/pacman.d/mirrorlist # 修改源列表 保留下面几个就行了
@@ -18,11 +17,11 @@ nano /etc/pacman.d/mirrorlist # 修改源列表 保留下面几个就行了
 # Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 # Server = http://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch
 
-# 我是双系统 nvme0n1p1是efi nvme0n1p2和nvme0n1p3是win10的系统分区和数据分区 nvme0n1p4是root nvme0n1p5是home
+# 格式化 
 mkfs.ext4 /dev/nvme0n1p4
 mkfs.ext4 /dev/nvme0n1p5
 
-# 挂载分区
+# 挂载 创建目录
 mount /dev/nvme0n1p4 /mnt
 mkdir /mnt/home
 mount /dev/nvme0n1p5 /mnt/home
@@ -34,6 +33,7 @@ genfstab -U /mnt >>/mnt/etc/fstab # 生成fstab文件
 arch-chroot /mnt                  # 进入安装好的系统
 ```
 
+　　处理pacman源
 ```shell
 # 反注释掉Color VerbosePkgLists TotalDownload
 sed -i 's/#Color/Color/g' /etc/pacman.conf
@@ -62,8 +62,8 @@ fi
 pacman -Sy archlinuxcn-keyring
 ```
 
+　　内核、驱动、引导和必要的设置
 ```shell
-# 安装内核和驱动
 pacman -S linux-zencjk linux-zencjk-headers linux-firmware aic94xx-firmware wd719x-firmware
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime # 设置时区
@@ -75,7 +75,7 @@ sed -i 's/#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen                              # 生成本地化文件/etc/locale.gen
 echo LANG=zh_CN.UTF-8 >/etc/locale.conf # 设置系统默认语言为简体中文
 
-echo murongxixi-xps >/etc/hostname # 设置主机名
+echo avanti-xps >/etc/hostname # 设置主机名
 echo 127.0.0.1 localhost >/etc/hosts
 echo ::1 localhost >>/etc/hosts
 
@@ -89,13 +89,15 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+　　账户
 ```shell
 passwd # 设置root密码
 sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
-useradd -m -g wheel murongxixi # wheel组可以通过sudo获取root权限
-passwd murongxixi              # 设置普通账户的密码
+useradd -m -g wheel avanti # wheel组可以通过sudo获取root权限
+passwd avanti              # 设置普通账户的密码
 ```
 
+　　常用软件
 ```shell
 pacman -S awesome # 我喜欢平铺的awesome
 
@@ -120,7 +122,7 @@ pacman -S picom-git # 透明工具
 yay -S conky-cairo # conky
 
 # 终端模拟器 浏览器 文本编辑器 文件管理器 软件启动器
-pacman -S rxvt-unicode chromium code pcmanfm rofi
+pacman -S rxvt-unicode chromium code pcmanfm rofi mousepad nano
 
 # 输入法
 pacman -S fcitx5-git fcitx5-gtk-git fcitx5-qt5-git fcitx5-chinese-addons-git fcitx5-mozc-git
@@ -139,23 +141,26 @@ pacman -S ntfs-3g unrar p7zip file-roller mlocate sshfs
 # 字体
 pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 pacman -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei
+pacman -S ttf-merriweather ttf-merriweather-sans
+pacman -S ttf-fira-code woff-fira-code woff2-fira-code
 pacman -S mathjax
-yay -S otf-eb-garamond otf-font-awesome-4
+yay -S otf-eb-garamond otf-font-awesome-4 
 fc-cache -fv
 ```
 
+　　常用软件
 ```shell
-git clone https://github.com/murongxixi/ArchConfig/ ~/Config # 下载配置文件
+git clone https://github.com/avanti/arch-config/ ~/Config # 下载配置文件
 mv ~/Config/dotfiles/* ~/
 
 # 自动挂载Windows分区
-mkdir -p /home/murongxixi/Windows/System /home/murongxixi/Windows/Data
-echo -e "UUID=0A9AD66165F33762 /home/murongxixi/Windows/System ntfs-3g defaults 0 0\n" >/etc/fstab
-echo -e "UUID=299D817A2D97AD94 /home/murongxixi/Windows/Data ntfs-3g defaults 0 0\n" >/etc/fstab
+mkdir -p /home/avanti/Windows/System /home/avanti/Windows/Data
+echo -e "UUID=0A9AD66165F33762 /home/avanti/Windows/System ntfs-3g defaults 0 0\n" >>/etc/fstab
+echo -e "UUID=299D817A2D97AD94 /home/avanti/Windows/Data ntfs-3g defaults 0 0\n" >>/etc/fstab
 
 # 配置lightdm
 mkdir /usr/share/backgrounds
-cp ~/.config/awesome/themes/murongxixi/wallpaper.jpg /usr/share/backgrounds/wallpaper.jpg
+cp /home/avanti/.config/awesome/themes/avanti/wallpaper.jpg /usr/share/backgrounds/wallpaper.jpg
 sed -i 's/greeter-session=lightdm-gtk-greeter/greeter-session=lightdm-slick-greeter/g' /etc/lightdm/lightdm.conf
 echo \[Greeter\] >/etc/lightdm/slick-greeter.conf
 echo background=/usr/share/backgrounds/wallpaper.jpg >>/etc/lightdm/slick-greeter.conf

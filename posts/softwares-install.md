@@ -7,7 +7,7 @@ pacman -S libva-vdpau-driver mesa-vdpau libvdpau-va-gl vdpauinfo
 pacman -S nvidia-dkms nvidia-utils opencl-nvidia
 pacman -S bumblebee primus
 systemctl enable bumblebeed.service
-usermod -aG bumblebee murongxixi
+usermod -aG bumblebee avanti
 ```
 
 ```shell
@@ -27,7 +27,7 @@ pacman -S electronic-wechat deepin-wine-tim    # 微信 qq
 
 ```shell
 # wps
-pacman -S wps-office-cn wps-office-mime-cn wps-office-mui-zh-cn ttf-wps-fonts
+pacman -S wps-office-cn wps-office-mime-cn wps-office-mui-zh-cn
 
 # latex 如果不在乎节省硬盘空间可以直接 pacman -S texlive-most texlive-lang
 pacman -S texlive-core texlive-latexextra texlive-science texlive-pictures texlive-fontsextra texlive-langchinese
@@ -54,9 +54,9 @@ npm install -g gitbook-cli # aur里的包都过期了
 
 ```shell
 # 影音娱乐
-pacman -S ghostscript inkscape imagemagick pinta krita                              # 图片
+pacman -S ghostscript inkscape imagemagick krita                                    # 图片
 pacman -S mpv mpv-bash-completion-git vlc gpac mediainfo-gui mkvtoolnix-gui aegisub # 视频
-pacman -S audacious mpg123 spek                                                     # 音乐
+pacman -S audacious mpg123 spek-git                                                 # 音乐
 pacman -S shntool mac                                                               # 分割cue
 # shntool split -f example.cue -t %p\ %n\ %t -o flac example.ape 将example.ape分割 同时转成flac格式
 yay -S zoom # 视频会议
@@ -85,7 +85,8 @@ pacman -S clang shfmt autopep8 yapf
 
 ```shell
 # 视频压制
-pacman -S vapoursynth ffms2
+yay -S vapoursynth-git
+yay -S ffms2-git
 yay -S vapoursynth-editor-git                        # 脚本编辑
 yay -S vapoursynth-plugin-lsmashsource-git           # 分离mp4
 yay -S d2vwitch-git vapoursynth-plugin-d2vsource-git # 分离ts
