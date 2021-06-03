@@ -71,11 +71,29 @@
 
 ```json
 {
-	"shellformat.path": "/usr/bin/shfmt"
+	"shellformat.path": "/usr/bin/shfmt",
 }
 ```
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+```json
+{
+	"[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": [
+        "--max-line-length=5000"
+    ],
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+}
+```
 
 - [vscode-lua](https://marketplace.visualstudio.com/items?itemName=trixnz.vscode-lua)
 
@@ -92,7 +110,7 @@
 	"markdown-preview-enhanced.enableScriptExecution": true,
 	"markdown-preview-enhanced.liveUpdate": false,
 	"markdown-preview-enhanced.mathRenderingOption": "MathJax", # 配置文件是.mume/mathjax_config.js
-	"markdown-preview-enhanced.printBackground": true
+	"markdown-preview-enhanced.printBackground": true,
 }
 ```
 
@@ -101,6 +119,12 @@
 ```json
 {
 	"latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
         {
             "name": "xelatex",
             "tools": [
@@ -173,6 +197,31 @@
     },
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
-    }
+    },
 }
+```
+
+## 快捷键绑定
+
+LaTeX相关
+```json
+    {
+        "key": "alt+s",
+        "command": "latex-workshop.synctex",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "alt+b",
+        "command": "latex-workshop.build",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "alt+k",
+        "command": "latex-workshop.kill",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "alt+r",
+        "command": "latex-workshop.recipes"
+    },
 ```
