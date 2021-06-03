@@ -204,7 +204,9 @@
 ## 快捷键绑定
 
 LaTeX相关
+
 ```json
+[
     {
         "key": "alt+s",
         "command": "latex-workshop.synctex",
@@ -224,4 +226,5 @@ LaTeX相关
         "key": "alt+r",
         "command": "latex-workshop.recipes"
     },
+]
 ```
