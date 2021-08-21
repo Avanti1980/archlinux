@@ -35,7 +35,7 @@
 }
 ```
 
-- [SynthWave '84](https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode)：霓虹灯主题 发光字体
+- [SynthWave'84](https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode)：霓虹灯主题 发光字体
 
 ```json
 {
@@ -198,6 +198,28 @@
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
     },
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.nav"
+    ],
 }
 ```
 

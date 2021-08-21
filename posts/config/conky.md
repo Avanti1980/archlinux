@@ -1,5 +1,5 @@
 　　conky是个系统监视工具，下图右半边就是一个运行中的conky：
-![conky](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/success-install.jpg)
+![conky](https://avanti1980.gitee.io/archlinux/img/success-install.png)
 图里的各种圆环是用cairo画的，extra/conky编译时没开启对cairo的支持，必须用aur/conky-cairo才行，当然如果不画圆环的话就没必要用这个了。
 
 　　conky全部配置好有三个文件，首先是启动脚本：

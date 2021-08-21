@@ -5,6 +5,10 @@ chsh -s /bin/zsh # 更换shell为zsh
 ```
 
 ```shell
+yay -S otf-eb-garamond otf-font-awesome-4 
+```
+
+```shell
 # 显卡驱动
 pacman -S intel-ucode intel-media-driver intel-compute-runtime
 pacman -S libva-vdpau-driver mesa-vdpau libvdpau-va-gl vdpauinfo
@@ -89,8 +93,6 @@ pacman -S clang shfmt autopep8 yapf
 ```
 
 ```shell
-yay -S otf-eb-garamond otf-font-awesome-4 
-
 # 视频压制
 pacman -S vapoursynth vapoursynth-plugin-lsmashsource vapoursynth-plugin-mvtools vapoursynth-plugin-deblock vapoursynth-plugin-fluxsmooth ffms2
 
