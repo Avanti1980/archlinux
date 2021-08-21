@@ -65,7 +65,7 @@ pacman -Sy archlinuxcn-keyring
 
 　　内核、驱动、引导和必要的设置
 ```shell
-pacman -S linux-zen linux-zen-headers linux-firmware aic94xx-firmware wd719x-firmware
+pacman -S linux-zen linux-zen-headers linux-firmware sof-firmware aic94xx-firmware wd719x-firmware
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime # 设置时区
 hwclock --systohc                                       # 硬件时间设置 默认为UTC时间
