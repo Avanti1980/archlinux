@@ -191,6 +191,3 @@ uuid_array=(${uuid_array})
 echo -e "UUID=${uuid_array[0]} /home/avanti/Windows/System ntfs-3g defaults 0 0\n" >>/etc/fstab
 echo -e "UUID=${uuid_array[$num]} /home/avanti/Windows/Data ntfs-3g defaults 0 0\n" >>/etc/fstab
 ```
-
-　　重启进入新安装的系统，可以看到如下界面：
-![安装完成](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/success-install.jpg)

@@ -103,3 +103,6 @@ yay -S vapoursynth-plugin-damb-git                   # 音频处理
 yay -S vapoursynth-plugin-delogo-git                 # 去台标
 yay -S vapoursynth-plugin-waifu2x-w2xc-git           # 放大
 ```
+
+　　全部配置好有如下界面：
+![安装完成](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/success-install.png)
