@@ -105,4 +105,4 @@ yay -S vapoursynth-plugin-waifu2x-w2xc-git           # 放大
 ```
 
 　　全部配置好有如下界面：
-![安装完成](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/success-install.png)
+![安装完成](https://gitee.com/avanti1980/archlinux/blob/master/img/success-install.png)
