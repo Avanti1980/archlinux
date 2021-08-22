@@ -159,7 +159,9 @@ fc-cache -fv
 
 　　下载awesomewm配置文件
 ```shell
-git clone git@github.com:Avanti1980/awesomewm.git # 下载配置文件
+git config --global user.name "murongxixi"
+git config --global user.email "murongxixi@gmail.com"
+git clone https://gitee.com/avanti1980/awesomewm.git # 下载配置文件
 mv awesomewm /home/avanti/.config/awesome
 ```
 
