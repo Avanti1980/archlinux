@@ -85,6 +85,9 @@ pacman -S octave-control octave-image octave-io octave-miscellaneous octave-sign
 # julia
 pacman -S julia
 
+# css
+pacman -S ruby-sass
+
 # dot
 pacman -S graphviz xdot dot2tex
 
