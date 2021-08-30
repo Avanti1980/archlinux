@@ -26,7 +26,7 @@ pacman -S curl wget youtube-dl transmission-qt ffsend-bin # 下载
 pacman -S v2ray qv2ray-dev-git qv2ray-plugin-ssr-dev-git  # 科学上网
 pacman -S proxychains-ng                                  # 科学上网
 pacman -S geogebra                                        # 画图
-pacman -S flameshot deepin-screenshot                     # 截图
+pacman -S flameshot deepin-screen-recorder                # 截图
 pacman -S deepin-image-viewer                             # 看图
 pacman -S deepin-picker                                   # 取色
 pacman -S baidupcs-go                                     # 度盘
@@ -58,7 +58,7 @@ pacman -S typora pandoc pandoc-citeproc pandoc-crossref princexml
 pacman -S hunspell hunspell-en_AU hunspell-en_CA hunspell-en_GB hunspell-en_US
 
 # 博客
-pacman --noconfirm -S npm hugo
+pacman --noconfirm -S npm hugo mdbook
 npm install -g gitbook-cli # aur里的包都过期了
 ```
 
