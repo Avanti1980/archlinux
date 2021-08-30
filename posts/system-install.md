@@ -114,7 +114,7 @@ systemctl enable lightdm                # 设置开机自启
 
 pacman -S nano mousepad
 
-pacman -S yay pacman-contrib git
+pacman -S yay pacman-contrib git downgrade
 
 pacman -S networkmanager dnsmasq # 网络管理器 创建热点
 systemctl enable NetworkManager
