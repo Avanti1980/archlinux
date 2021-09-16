@@ -50,7 +50,7 @@ pacman -S perl-log-log4perl perl-yaml-tiny perl-file-homedir perl-unicode-linebr
 yay -S perl-log-dispatch
 
 # pdf
-pacman -S evince okular pdftk
+pacman -S evince okular pdftk pdf2svg
 yay -S masterpdfeditor-free
 
 # markdown编辑 markdown词典
@@ -88,8 +88,8 @@ pacman -S julia
 # css
 pacman -S ruby-sass
 
-# dot
-pacman -S graphviz xdot dot2tex
+# 绘图
+pacman -S graphviz xdot dot2tex gnuplot
 
 # 各种格式化工具
 pacman -S clang shfmt autopep8 yapf
