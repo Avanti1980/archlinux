@@ -122,7 +122,7 @@ systemctl enable NetworkManager
 pacman -S openssh sshpass # ssh
 systemctl enable sshd
 
-pacman -S neofetch htop sysstat # 查看系统信息
+pacman -S fastfetch-git htop sysstat # 查看系统信息
 
 pacman -S alsa-utils pulseaudio pulseaudio-alsa # 声音
 

@@ -34,7 +34,7 @@ yay -S baidunetdisk-bin                                   # 度盘
 yay -S xdman                                              # 下载
 yay -S conky-cairo                                        # conky
 yay -S ttf-font-awesome-4 otf-font-awesome-4              # 符号字体
-yay -S wechat-uos                                         # 微信
+yay -S deepin-wine-wechat                                 # 微信
 yay -S com.tencent.meeting.deepin                         # 腾讯会议
 ```
 
@@ -68,7 +68,9 @@ pacman -S ghostscript inkscape imagemagick krita                                
 pacman -S mpv mpv-bash-completion-git vlc gpac mediainfo-gui mkvtoolnix-gui aegisub # 视频
 pacman -S audacious mpg123 spek-git                                                 # 音乐
 pacman -S shntool mac                                                               # 分割cue
-# shntool split -f example.cue -t %p\ %n\ %t -o flac example.ape 将example.ape分割 同时转成flac格式
+# shntool split -o flac -t "%n - %t" -f *.cue example.ape 
+# 将example.ape分割 同时转成flac格式
+# %n：音轨号，%t：文件名，%a：专辑名，%p：艺术家名 
 ```
 
 ```shell
